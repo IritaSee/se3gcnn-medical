@@ -52,4 +52,4 @@ The script to train the networks is train_drivedata.py.
 
 In the main experiments, there are 5 networks to train. In the paper, they are named OursFull, OursPart, OursDecoupled, Baseline, and Classical. We train each network with a small and a big capacity (marked in the names with superscript - or +), and with or without data augmentation (marked in the names with or without Aug). Thus we end up with 20 experiments.
 
-To train OursFull<sup>+</sup>
+To train OursFull<sup>+</sup> or OursFull<sup>- </sup>
