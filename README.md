@@ -24,10 +24,11 @@ In this work, Human-connectome Project (HCP) data are used. The data can be down
 After registering and downloading the data (you can download one scan at a time), each scan is a folder named by an ID (e.g. 100408) containing all the data needed. All scan folders are contained in a root folder. The structure of the folders should be:
 ```
 Folder that contains the root folder
-|-	HCP(root folder)
-	|-	100206 (scan folder)
-	|-	100307 (scan folder)
+├──	HCP(root folder)
+	├──	100206 (scan folder)
+	├──	100307 (scan folder)
 	...	
+	...
 ```
 ## Steps to run the networks
 
