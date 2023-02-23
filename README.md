@@ -19,7 +19,7 @@ numpy
 
 ## Data
 
-In this work, Human-connectome Project (HCP) data are used. The data can be downloaded from ...
+In this work, Human-connectome Project (HCP) data are used. The data can be downloaded from ![Data Link](https://www.humanconnectome.org/study/hcp-young-adult/). Registration is needed.
 
 After registering and downloading the data (you can download one scan at a time), each scan is a folder named by an ID (e.g. 100408) containing all the data needed. All scan folders are contained in a root folder. The structure of the folders should be:
 ```
@@ -40,7 +40,7 @@ The script to process the data is datagen.py.
 
 There are 3 types of pre-processed data that need to be generated. The brain mask is used to extract meaningful voxels that are in the brain, and for all the networks, either a grid of voxels centered at a meaningful voxel or just the voxel itself is used, based what network it is. Details are explained below.
 
-* Data grids of size 7x7x7 in which each voxel contains a spherical function, interpolated using the directional signals in the original scan. This type of data is used to train the SE(3) group CNN. In the ablation study, this type of data is also used to train the T <sup>3</sup> x SO(3) group CNN. In the paper, the networks that use this type of data are called Ours (SE(3) group CNNs including OursFull and OursPart) and OursDecoupled (<sup>3</sup> x SO(3) group CNN). To generate this type of data, run ```python datagen.py --path [your path to the root folder] --interpolate --grid_size 7```
+* Data grids of size 7x7x7 in which each voxel contains a spherical function, interpolated using the directional signals in the original scan. This type of data is used to train the SE(3) group CNN. In the ablation study, this type of data is also used to train the T<sup>3</sup> x SO(3) group CNN. In the paper, the networks that use this type of data are called Ours (SE(3) group CNNs including OursFull and OursPart) and OursDecoupled (T<sup>3</sup> x SO(3) group CNN). To generate this type of data, run ```python datagen.py --path [your path to the root folder] --interpolate --grid_size 7```
 
 * Data grids of size 7x7x7 in which each voxel contains flattened signals with no directional information. This type of data is used to train classical CNNs. To generate this type of data, run ```python datagen.py --path [your path to the data folder] --grid_size 7```
 
@@ -116,3 +116,4 @@ For the augmented Classical CNNs, o generate the results from the fully augmente
 To generate the results from the partly augmented network, run ```python equiv_test.py --path [your path to the root folder] --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network classical_augment_part```
 
 To generate the results from the SE(3) network that is used to compare with an existing method, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_compare```
+
