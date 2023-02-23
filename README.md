@@ -1,5 +1,5 @@
 # SE(3) group convolutional neural networks and a study on group convolutions and equivariance for DWI segmentation
-![Visualization of the network](visualizations/demo.gif)
+![Visualization of the network](visualization/demo.gif)
 The main code is in train_drivedata.py.
 
 Conda virtual environment is used. Packages needed:
