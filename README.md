@@ -55,7 +55,7 @@ Weights and Biases (WandB) package is used to log the training. To run our scrip
 
 It is suggested to use the same WandB name for all the experiments, so they will all be shown together. It is also suggested to store the results in the same folder in different sub-folders. In other words, it is suggested to use the same --run_path and --exp_name arguments for all experiments.
 
-In the main experiments, there are 5 networks to train. In the paper, they are named OursFull, OursPart, OursDecoupled, Baseline, and Classical. We train each network with a small and a big capacity (marked in the names with superscript - or +), and with or without data augmentation (marked in the names with or without Aug). Thus we end up with 20 experiments.
+In the main experiments, there are 5 networks to train. In the paper, they are named OursFull, OursPart, OursDecoupled, Baseline, and Classical. We train each network with a small and a big capacity (marked in the names with superscript - or +), and with or without data augmentation (marked in the names with or without Aug). Thus we end up with 20 experiments. The names of the experiments are the same as in the paper.
 
 To train OursFull<sup>- </sup> or OursFull<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_full```
 
@@ -84,3 +84,35 @@ To train the fully augmented network, run ```python train_drivedata.py --path [y
 To train the partly augmented network, run ```python train_drivedata.py --path [your path to the root folder] --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network classical_augment_part```
 
 The SE(3) network that is used to compare with an existing method in literature has the same theoretical formulation as OursFull, but is configured in a way such that it has similar capacity to the method that it is compared to. To run this SE(3) network, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_compare```
+
+### Testing
+
+To get test results from all models, the script equiv_test.py is used. This script generates test results from both the original test set and a randomly rotated test set. To make sure the random rotations that are used for all experiments are the same, we generate these random rotations first and use these rotations for all trained models. To generate the rotations, run ```python gen_cube_rotation_inds.py --path [your path to the root folder]```
+
+After the random rotations are generated, we can generate the test results from all models that were trained, using both the original and the rotated test set.
+
+To generate the results from OursFull<sup>- </sup> or OursFull<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_full```
+
+To generate the results from OursFullAug<sup>- </sup> or OursFullAug<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_full --data_aug```
+
+To generate the results from OursPart<sup>- </sup> or OursPart<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_part```
+
+To generate the results from OursPartAug<sup>- </sup> or OursPartAug<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_part --data_aug```
+
+To generate the results from OursDecoupled<sup>- </sup> or OursDecoupled<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_decoupled```
+
+To generate the results from OursDecoupledAug<sup>- </sup> or OursDecoupledAug<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_decoupled --data_aug```
+
+To generate the results from Baseline<sup>- </sup> or Baseline<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 1 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network baseline```
+
+To generate the results from BaselineAug<sup>- </sup> or BaselineAug<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 1 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network baseline --data_aug```
+
+To generate the results from Classical<sup>- </sup> or Classical<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network classical```
+
+To generate the results from ClassicalAug<sup>- </sup> or ClassicalAug<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network classical --data_aug```
+
+For the augmented Classical CNNs, o generate the results from the fully augmented network, run ```python equiv_test.py --path [your path to the root folder] --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network classical_augment_full```
+
+To generate the results from the partly augmented network, run ```python equiv_test.py --path [your path to the root folder] --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network classical_augment_part```
+
+To generate the results from the SE(3) network that is used to compare with an existing method, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_compare```
