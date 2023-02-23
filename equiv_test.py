@@ -421,34 +421,5 @@ def main():
     else:
         raise ValueError('Invalid network!')
 
-    if args.interpolate:
-        # run_testing(args, 42, 1, all_paths, names, "run_steerable_gcnn(args, device, True)")
-        # run_testing(args, 48, 0, all_paths, names, "run_steerable_gcnn(args, device, False)")
-        # run_testing(args, 54, 1, all_paths, names, "run_spatial_gcnn(args)")
-        # run_testing(args, 15, 1, all_paths, names, "run_steerable_gcnn(args, device, True)")
-        # run_testing(args, 15, 0, all_paths, names, "run_steerable_gcnn(args, device, False)")
-        # run_testing(args, 37, 0, all_paths, names, "run_spatial_gcnn(args)")
-        run_testing(args, 34, 1, all_paths, names, "run_steerable_param_gcnn(args, device, True)")
-
-        # run_testing(args, 18, 0, all_paths, names, "run_steerable_gcnn(args, device, True)")
-        # run_testing(args, 18, 1, all_paths, names, "run_steerable_gcnn(args, device, False)")
-        # run_testing(args, 54, 1, all_paths, names, "run_voxelcnn(args)")
-        #threads.append(Process(target=run_testing, args=(args, 1, all_paths, names, "run_voxelcnn(args)")))
-        #threads.append(Process(target=run_testing, args=(args, 0, all_paths, names, "run_spatial_gcnn(args)")))
-        #threads.append(Process(target=run_testing, args=(args, 1, all_paths, names, "run_steerable_gcnn(args, device, True)")))
-        #threads.append(Process(target=run_testing, args=(args, 0, all_paths, names, "run_steerable_gcnn(args, device, False)")))
-    else:
-        print("hahahaha happening")
-        run_testing(args, 19, 0, all_paths, names, "run_classicalcnn(args)")
-        # run_testing(args, 19, 1, all_paths, names, "run_classicalcnn(args)")
-        #run_testing(args, 32, 0, all_paths, names, "run_augment_classicalcnn(args, device, True)")
-        # run_testing(args, 32, 1, all_paths, names, "run_augment_classicalcnn(args, device, False)")
-        # run_testing(args, 1, all_paths, names, "run_steerable_classicalcnn(args, device, True)")
-        # run_testing(args, 1, all_paths, names, "run_steerable_classicalcnn(args, device, False)")
-        #threads.append(Process(target=run_testing, args=(args,1, all_paths, names, "run_classicalcnn(args)")))
-        #threads.append(Process(target=run_testing, args=(args,1, all_paths, names, "run_steerable_classicalcnn(args, device, True)")))
-        #threads.append(Process(target=run_testing, args=(args,1, all_paths, names, "run_steerable_classicalcnn(args, device, False)")))
-        #threads.append(Process(target=run_testing, args=(args, 0, all_paths, names, "run_augment_classicalcnn(args, device, True)")))
-        #threads.append(Process(target=run_testing, args=(args, 1, all_paths, names, "run_augment_classicalcnn(args, device, False)")))
 if __name__ == '__main__':
     main()

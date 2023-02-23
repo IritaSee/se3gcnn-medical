@@ -287,56 +287,5 @@ def main():
     else:
     	raise ValueError('Invalid network!')
 
-    # run_training(args, args.cuda, train_dl, test_dl, "run_spatial_gcnn(args)")
-    # run_training(args, args.cuda, train_dl, test_dl, "run_steerable_gcnn(args, device, True)")
-    # run_training(args, args.cuda, train_dl, test_dl, "run_steerable_gcnn(args, device, False)")
-    # run_training(args, args.cuda, train_dl, test_dl, "run_steerable_param_gcnn(args, device, True)")
-    # run_training(args, args.cuda, train_dl, test_dl, "run_classicalcnn(args)")
-    # run_training(args, args.cuda, train_dl, test_dl, "run_augment_classicalcnn(args, device, True)")
-    # run_training(args, args.cuda, train_dl, test_dl, "run_augment_classicalcnn(args, device, False)")
-
-    #run_training(args, args.cuda, train_dl, test_dl, "run_voxelcnn(args)")
-    # threads = []
-    # if args.interpolate:
-    #     # run_training(args, 1, train_dl, test_dl, "run_spatial_gcnn(args)")
-    #     # run_training(args, 0, train_dl, test_dl, "run_voxelcnn(args)")
-    #     # run_training(args, 1, train_dl, test_dl, "run_steerable_gcnn(args, device, False)")
-    #     p1 = Process(target=run_training, args=(args, 1, train_dl, test_dl, "run_spatial_gcnn(args)"))
-    #     threads.append(p1)
-    #     p2 = Process(target=run_training, args=(args, 0, train_dl, test_dl, "run_steerable_gcnn(args, device, True)"))
-    #     threads.append(p2)
-    #     p3 = Process(target=run_training, args=(args, 1, train_dl, test_dl, "run_steerable_gcnn(args, device, False)"))
-    #     threads.append(p3)
-    #     # p2 = Process(target=run_training, args=(args, 0, train_dl, test_dl, "run_augment_classicalcnn(args, device, True)"))
-    #     # threads.append(p2)
-    #     # p3 = Process(target=run_training, args=(args, 1, train_dl, test_dl, "run_augment_classicalcnn(args, device, False)"))
-    #     # threads.append(p3)
-
-    # else:
-    #     p3 = Process(target=run_training, args=(args,0, train_dl, test_dl, "run_classicalcnn(args)"))
-    #     threads.append(p3)
-    #     # print("steerable classical_cnn")
-    #     # run_training(args,0, train_dl, test_dl, "run_steerable_classicalcnn(args, device, True)")
-    #     #p4 = Process(target=run_training, args=(args,0, train_dl, test_dl, "run_steerable_classicalcnn(args, device, True)"))
-    #     #threads.append(p4)
-    #     #p5 = Process(target=run_training, args=(args,1, train_dl, test_dl, "run_steerable_classicalcnn(args, device, False)"))
-    #     #threads.append(p5)
-    #     # run_training(args,0, train_dl, test_dl, "run_augment_classicalcnn(args, device, True)")
-    #     # run_training(args,1, train_dl, test_dl, "run_augment_classicalcnn(args, device, False)")
-    #     #run_training(args, 0, train_dl, test_dl, "run_augment_classicalcnn(args, device, True)")
-    #     #run_training(args, 1, train_dl, test_dl, "run_augment_classicalcnn(args, device, False)")
-    #     # p6 = Process(target=run_training, args=(args, 0, train_dl, test_dl, "run_augment_classicalcnn(args, device, True)"))
-    #     # threads.append(p6)
-    #     # p7 = Process(target=run_training, args=(args, 1, train_dl, test_dl, "run_augment_classicalcnn(args, device, False)"))
-    #     # threads.append(p7)
-
-    # for p in threads:
-    #     p.start()
-    # for p in threads:
-    #     p.join()
-
-    
-
-
 if __name__ == '__main__':
     main()
