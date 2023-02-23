@@ -40,16 +40,47 @@ The script to process the data is datagen.py.
 
 There are 3 types of pre-processed data that need to be generated. The brain mask is used to extract meaningful voxels that are in the brain, and for all the networks, either a grid of voxels centered at a meaningful voxel or just the voxel itself is used, based what network it is. Details are explained below.
 
-* Data grids of size 7x7x7 in which each voxel contains a spherical function, interpolated using the directional signals in the original scan. This type of data is used to train the SE(3) group CNN. In the ablation study, this type of data is also used to train the T<sup>3</sup> x SO(3) group CNN. In the paper, the networks that use this type of data are called Ours (including OursFull and OursPart) and OursDecoupled. To generate this type of data, run ```python datagen.py --path [your path to the data folder] --interpolate --grid_size 7```
+* Data grids of size 7x7x7 in which each voxel contains a spherical function, interpolated using the directional signals in the original scan. This type of data is used to train the SE(3) group CNN. In the ablation study, this type of data is also used to train the T<sup>3</sup> x SO(3) group CNN. In the paper, the networks that use this type of data are called Ours (SE(3) group CNNs including OursFull and OursPart) and OursDecoupled (<sup>3</sup> x SO(3) group CNN). To generate this type of data, run ```python datagen.py --path [your path to the root folder] --interpolate --grid_size 7```
 
 * Data grids of size 7x7x7 in which each voxel contains flattened signals with no directional information. This type of data is used to train classical CNNs. To generate this type of data, run ```python datagen.py --path [your path to the data folder] --grid_size 7```
 
-* Single voxels. Each voxel is a spherical function interpolated using the directional signals in the original scan. To generate this typd of data, run ```python datagen.py --path [your path to the data folder] --interpolate --grid_size 1```
+* Single voxels. Each voxel is a spherical function interpolated using the directional signals in the original scan. To generate this typd of data, run ```python datagen.py --path [your path to the root folder] --interpolate --grid_size 1```
 
+The generated data will be stored in a created folder in the HCP root folder called data_aligned.
 ### Train the networks
 
 The script to train the networks is train_drivedata.py.
 
+Weights and Biases (WandB) package is used to log the training. To run our script, you simply have to provide in the command line an experiment name (that you think of yourself) for WandB for the logging, and follow the instructions shown in the console from WandB.
+
+It is suggested to use the same WandB name for all the experiments, so they will all be shown together. It is also suggested to store the results in the same folder in different sub-folders. In other words, it is suggested to use the same --run_path and --exp_name arguments for all experiments.
+
 In the main experiments, there are 5 networks to train. In the paper, they are named OursFull, OursPart, OursDecoupled, Baseline, and Classical. We train each network with a small and a big capacity (marked in the names with superscript - or +), and with or without data augmentation (marked in the names with or without Aug). Thus we end up with 20 experiments.
 
-To train OursFull<sup>+</sup> or OursFull<sup>- </sup>
+To train OursFull<sup>- </sup> or OursFull<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_full```
+
+To train OursFullAug<sup>- </sup> or OursFullAug<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_full --data_aug```
+
+To train OursPart<sup>- </sup> or OursPart<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_part```
+
+To train OursPartAug<sup>- </sup> or OursPartAug<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_part --data_aug```
+
+To train OursDecoupled<sup>- </sup> or OursDecoupled<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_decoupled```
+
+To train OursDecoupledAug<sup>- </sup> or OursDecoupledAug<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_decoupled --data_aug```
+
+To train Baseline<sup>- </sup> or Baseline<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 1 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network baseline```
+
+To train BaselineAug<sup>- </sup> or BaselineAug<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 1 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network baseline --data_aug```
+
+To train Classical<sup>- </sup> or Classical<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network classical```
+
+To train ClassicalAug<sup>- </sup> or ClassicalAug<sup>+</sup>, run ```python train_drivedata.py --path [your path to the root folder] --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network classical --data_aug```
+
+After the main experiments, we also provided 2 small example networks that use Classical CNN with augmented training (different from data augmentation). Of these 2 networks, the models themselves encode some augmentation, one network is fully augmented and another is partly augmented. 
+
+To train the fully augmented network, run ```python train_drivedata.py --path [your path to the root folder] --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network classical_augment_full```
+
+To train the partly augmented network, run ```python train_drivedata.py --path [your path to the root folder] --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network classical_augment_part```
+
+The SE(3) network that is used to compare with an existing method in literature has the same theoretical formulation as OursFull, but is configured in a way such that it has similar capacity to the method that it is compared to. To run this SE(3) network, run ```python train_drivedata.py --path [your path to the root folder] --interoplate --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --network ours_compare```
