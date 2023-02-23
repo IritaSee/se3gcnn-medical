@@ -32,9 +32,11 @@ Folder that contains the root folder
 ```
 ## Steps to run the networks
 
-The data need to be pre-processed before being fed into the networks. The script to process the data is in datagen.py.
+The data need to be pre-processed before being fed into the networks.
 
 ### Data pre-processing and generation
+
+The script to process the data is datagen.py.
 
 There are 3 types of pre-processed data that need to be generated. The brain mask is used to extract meaningful voxels that are in the brain, and for all the networks, either a grid of voxels centered at a meaningful voxel or just the voxel itself is used, based what network it is. Details are explained below.
 
@@ -46,4 +48,8 @@ There are 3 types of pre-processed data that need to be generated. The brain mas
 
 ### Train the networks
 
-In the main experiments, there are 5 networks to train. In the paper, they are named OursFull, OursPart, OursDecoupled, Baseline, and Classical. We train each network with a small and a big capacity, and with or without data augmentation. Thus we end up with 20 experiments
+The script to train the networks is train_drivedata.py.
+
+In the main experiments, there are 5 networks to train. In the paper, they are named OursFull, OursPart, OursDecoupled, Baseline, and Classical. We train each network with a small and a big capacity (marked in the names with superscript - or +), and with or without data augmentation (marked in the names with or without Aug). Thus we end up with 20 experiments.
+
+To train OursFull<sup>+</sup>
