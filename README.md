@@ -30,6 +30,10 @@ Folder that contains the root folder
 	...	
 	...
 ```
+
+The scans we downloaded have the following IDs:
+103414, 105620, 101309, 106521, 107725, 103818, 110007, 104012, 113316, 105115, 108828, 111312, 112112, 111211, 100408, 108222, 110411, 108525, 110613, 111009, 104820, 111716, 103111, 102614, 101915, 103515, 101006, 106016, 112920, 111514, 103212, 105014, 106319, 101107, 103010, 111413, 102816, 113215, 101410, 102109, 109830, 109123, 112314, 112516, 108121, 108020, 104416, 102715, 105216, 100206, 107422, 105923.
+
 ## Steps to run the networks
 
 The data need to be pre-processed before being fed into the networks.
@@ -49,7 +53,7 @@ There are 3 types of pre-processed data that need to be generated. The brain mas
 The generated data will be stored in a created folder in the HCP root folder called data_aligned.
 ### Train the networks
 
-The script to train the networks is train_drivedata.py.
+The script to train the networks is train_drivedata.py. In the script, we use the scan with ID 100206 to train the network, and the scan with ID 100408 for validation during training. Feel free to change it to other scans.
 
 Weights and Biases (WandB) package is used to log the training. To run our script, you simply have to provide in the command line an experiment name (that you think of yourself) for WandB for the logging, and follow the instructions shown in the console from WandB.
 
