@@ -368,7 +368,7 @@ def main():
     parser.add_argument("--epoch", type=int, default=40)
     parser.add_argument("--cuda", type=int, default=0)
     parser.add_argument("--grid_size", type=int, default=7)
-    parser.add_argument("--run_path", type=str, default='data_aug_exp')
+    parser.add_argument("--run_path", type=str, default='test')
     parser.add_argument("--spatial_kernel_size", nargs='+', type=int, default=[3, 3, 3])
     parser.add_argument("--interpolate", default=False, action='store_true')    # if true, the program runs GCNN, if false, the program runs classical CNN.
     parser.add_argument("--pooling", type=str, default='max')
