@@ -17,6 +17,8 @@ nibabel 3.2.1
 
 numpy
 
+The code has been test on Ubuntu 20.04.4 LTS as well as Windows 10, but not on Mac OS.
+
 ## Data
 
 In this work, Human-connectome Project (HCP) data [[1]](#1) are used. The data can be downloaded from [here](https://www.humanconnectome.org/study/hcp-young-adult/). Registration is needed.
