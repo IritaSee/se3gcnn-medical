@@ -19,7 +19,7 @@ numpy
 
 ## Data
 
-In this work, Human-connectome Project (HCP) data are used. The data can be downloaded from ![Data Link](https://www.humanconnectome.org/study/hcp-young-adult/). Registration is needed.
+In this work, Human-connectome Project (HCP) data are used. The data can be downloaded from [Data Link](https://www.humanconnectome.org/study/hcp-young-adult/). Registration is needed.
 
 After registering and downloading the data (you can download one scan at a time), each scan is a folder named by an ID (e.g. 100408) containing all the data needed. All scan folders are contained in a root folder. The structure of the folders should be:
 ```
