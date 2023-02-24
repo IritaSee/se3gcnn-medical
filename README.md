@@ -53,7 +53,7 @@ The script to train the networks is train_drivedata.py.
 
 Weights and Biases (WandB) package is used to log the training. To run our script, you simply have to provide in the command line an experiment name (that you think of yourself) for WandB for the logging, and follow the instructions shown in the console from WandB.
 
-It is suggested to use the same WandB name for all the experiments, so they will all be shown together. It is also suggested to store the results in the same folder in different sub-folders. In other words, it is suggested to use the same --run_path and --exp_name arguments for all experiments.
+It is suggested to use the same WandB name for all the experiments, so they will all be shown together. It is also suggested to store the results in the same folder in different sub-folders. **In other words, it is suggested to use the same --run_path and --exp_name arguments for all experiments.**
 
 In the main experiments, there are 5 networks to train. In the paper, they are named OursFull, OursPart, OursDecoupled, Baseline, and Classical. We train each network with a small and a big capacity (marked in the names with superscript - or +), and with or without data augmentation (marked in the names with or without Aug). Thus we end up with 20 experiments. The names of the experiments are the same as in the paper.
 
@@ -89,7 +89,7 @@ The SE(3) network that is used to compare with an existing method in literature 
 
 To get test results from all models, the script equiv_test.py is used. This script generates test results from both the original test set and a randomly rotated test set. To make sure the random rotations that are used for all experiments are the same, we generate these random rotations first and use these rotations for all trained models. To generate the rotations, run ```python gen_cube_rotation_inds.py --path [your path to the root folder]```
 
-After the random rotations are generated, we can generate the test results from all models that were trained, using both the original and the rotated test set.
+After the random rotations are generated, we can generate the test results from all models that were trained, using both the original and the rotated test set. The accuracies and dices scores of each scan will be stored in a folder named ```images/``` in the experiment folder, and the predicted segmentation will also be generated and stored in ```images/```.
 
 To generate the results from OursFull<sup>- </sup> or OursFull<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_full```
 

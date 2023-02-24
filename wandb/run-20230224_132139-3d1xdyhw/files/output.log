@@ -1,0 +1,28 @@
+#params 59914
+  0%|          | 0/100 [00:00<?, ?it/s]
+  0%|          | 0/6286 [00:00<?, ?it/s][A  0%|          | 0/6286 [00:00<?, ?it/s]
+  0%|          | 0/100 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train_drivedata.py", line 291, in <module>
+    main()
+  File "train_drivedata.py", line 268, in main
+    run_training(args, args.cuda, train_dl, test_dl, "run_steerable_gcnn(args, device, False)")
+  File "train_drivedata.py", line 60, in run_training
+    device)
+  File "/home/renfei/Documents/se3gcnn/model_util.py", line 897, in train_model
+    out = model(m)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/renfei/Documents/se3gcnn/model_util.py", line 637, in forward
+    x = self.lifting_spatial_groupconv(x)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/renfei/Documents/se3gcnn/model_util.py", line 56, in forward
+    rot_response = torch.tensordot(data, kernel_all, dims=([2, 3], [1, 2]))                    # batch_size x 12 x 7 x 7 x 7 x 5 x f_out
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/functional.py", line 936, in tensordot
+    return _VF.tensordot(a, b, dims_a, dims_b)  # type: ignore
+KeyboardInterrupt

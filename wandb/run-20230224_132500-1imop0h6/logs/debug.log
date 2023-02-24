@@ -1,0 +1,31 @@
+2023-02-24 13:25:00,371 INFO    MainThread:191924 [wandb_setup.py:_flush():69] setting env: {}
+2023-02-24 13:25:00,371 INFO    MainThread:191924 [wandb_setup.py:_flush():69] setting login settings: {}
+2023-02-24 13:25:00,371 INFO    MainThread:191924 [wandb_init.py:_log_setup():334] Logging user logs to /home/renfei/Documents/se3gcnn/wandb/run-20230224_132500-1imop0h6/logs/debug.log
+2023-02-24 13:25:00,371 INFO    MainThread:191924 [wandb_init.py:_log_setup():335] Logging internal logs to /home/renfei/Documents/se3gcnn/wandb/run-20230224_132500-1imop0h6/logs/debug-internal.log
+2023-02-24 13:25:00,372 INFO    MainThread:191924 [wandb_init.py:init():367] calling init triggers
+2023-02-24 13:25:00,372 INFO    MainThread:191924 [wandb_init.py:init():374] wandb.init called with sweep_config: {}
+config: {}
+2023-02-24 13:25:00,372 INFO    MainThread:191924 [wandb_init.py:init():416] starting backend
+2023-02-24 13:25:00,372 INFO    MainThread:191924 [backend.py:_multiprocessing_setup():71] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-02-24 13:25:00,379 INFO    MainThread:191924 [backend.py:ensure_launched():123] starting backend process...
+2023-02-24 13:25:00,473 INFO    MainThread:191924 [backend.py:ensure_launched():128] started backend process with pid: 191963
+2023-02-24 13:25:00,474 INFO    MainThread:191924 [wandb_init.py:init():421] backend started and connected
+2023-02-24 13:25:00,475 INFO    MainThread:191924 [wandb_init.py:init():461] updated telemetry
+2023-02-24 13:25:00,476 INFO    MainThread:191924 [wandb_init.py:init():480] communicating current version
+2023-02-24 13:25:00,899 WARNING MainThread:191924 [wandb_init.py:init():763] interrupted
+Traceback (most recent call last):
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 743, in init
+    run = wi.init()
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/wandb/sdk/wandb_init.py", line 482, in init
+    current_version=wandb.__version__
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 767, in communicate_check_version
+    result = self._communicate(rec)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 527, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/wandb/sdk/interface/interface.py", line 82, in get
+    is_set = self._object_ready.wait(timeout)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/threading.py", line 551, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/threading.py", line 299, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

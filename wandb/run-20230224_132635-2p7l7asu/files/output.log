@@ -1,0 +1,31 @@
+#params 2104
+  0%|          | 0/100 [00:00<?, ?it/s]
+  0%|          | 0/6286 [00:00<?, ?it/s][A
+  0%|          | 1/6286 [00:00<1:23:08,  1.26it/s][A
+  0%|          | 10/6286 [00:00<07:04, 14.77it/s] [A
+  0%|          | 19/6286 [00:01<03:44, 27.90it/s][A
+  0%|          | 28/6286 [00:01<02:36, 40.10it/s][A
+  1%|          | 37/6286 [00:01<02:03, 50.43it/s][A
+  1%|          | 46/6286 [00:01<01:46, 58.71it/s][A
+  1%|          | 55/6286 [00:01<01:35, 65.52it/s][A
+  1%|          | 64/6286 [00:01<01:27, 70.85it/s][A
+  1%|          | 73/6286 [00:01<01:22, 75.02it/s][A
+  1%|▏         | 82/6286 [00:01<01:19, 77.59it/s][A
+  1%|▏         | 91/6286 [00:01<01:17, 79.97it/s][A  2%|▏         | 95/6286 [00:01<02:04, 49.58it/s]
+  0%|          | 0/100 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "train_drivedata.py", line 291, in <module>
+    main()
+  File "train_drivedata.py", line 277, in main
+    run_training(args, args.cuda, train_dl, test_dl, "run_voxelcnn(args)")
+  File "train_drivedata.py", line 60, in run_training
+    device)
+  File "/home/renfei/Documents/se3gcnn/model_util.py", line 904, in train_model
+    optimiser.step()
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/autograd/grad_mode.py", line 26, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/optim/adam.py", line 119, in step
+    group['eps']
+  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/optim/functional.py", line 86, in adam
+    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+KeyboardInterrupt

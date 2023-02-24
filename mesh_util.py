@@ -57,7 +57,7 @@ def check_counterclockwise(ring, vertices):
         diff = np.squeeze(np.dot(cross_prod, norm))
         assert len(np.unique(np.sign(diff))) == 1
         if not np.all(diff < 0):
-            print("ah ohhh")
+            print("Clockwise ring, making it counterclockwise.")
             new_r = np.stack([r[:, 0], inds[::-1]]).T
             new_rings.append(new_r)
         else:
@@ -166,7 +166,7 @@ def sample_tangent_points(all_directions, points_per_ray, max_len):
         scales = torch.linspace(0, max_len, points_per_ray+1, dtype=torch.float64)[1:]
     
     n, p, d = all_directions.shape    # 12, 5, 3
-    print(all_directions.dtype, scales.dtype)
+
     all_points = torch.einsum("npd,s->npds", (all_directions, scales))
     all_points = all_points.permute(0, 2, 1, 3).reshape(n, d, -1)
     all_points = all_points.permute(0, 2, 1)

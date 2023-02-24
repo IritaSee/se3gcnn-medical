@@ -1,0 +1,39 @@
+2023-02-24 13:34:31,868 INFO    MainThread:192648 [internal.py:wandb_internal():91] W&B internal server running at pid: 192648, started at: 2023-02-24 13:34:31.868545
+2023-02-24 13:34:31,871 DEBUG   HandlerThread:192648 [handler.py:handle_request():101] handle_request: check_version
+2023-02-24 13:34:31,871 INFO    WriterThread:192648 [datastore.py:open_for_write():77] open: /home/renfei/Documents/se3gcnn/wandb/run-20230224_133431-3gqiquny/run-3gqiquny.wandb
+2023-02-24 13:34:31,874 DEBUG   SenderThread:192648 [sender.py:send():161] send: header
+2023-02-24 13:34:31,875 DEBUG   SenderThread:192648 [sender.py:send():161] send: request
+2023-02-24 13:34:31,875 DEBUG   SenderThread:192648 [sender.py:send_request():170] send_request: check_version
+2023-02-24 13:34:31,967 DEBUG   SenderThread:192648 [sender.py:send():161] send: run
+2023-02-24 13:34:32,293 INFO    SenderThread:192648 [sender.py:_start_run_threads():638] run started: 3gqiquny with start time 1677242071
+2023-02-24 13:34:32,293 DEBUG   SenderThread:192648 [sender.py:send():161] send: summary
+2023-02-24 13:34:32,294 INFO    SenderThread:192648 [sender.py:_save_file():769] saving file wandb-summary.json with policy end
+2023-02-24 13:34:32,299 DEBUG   HandlerThread:192648 [handler.py:handle_request():101] handle_request: run_start
+2023-02-24 13:34:32,308 DEBUG   HandlerThread:192648 [meta.py:__init__():34] meta init
+2023-02-24 13:34:32,308 DEBUG   HandlerThread:192648 [meta.py:__init__():48] meta init done
+2023-02-24 13:34:32,308 DEBUG   HandlerThread:192648 [meta.py:probe():190] probe
+2023-02-24 13:34:32,316 DEBUG   HandlerThread:192648 [meta.py:_setup_git():180] setup git
+2023-02-24 13:34:32,341 DEBUG   HandlerThread:192648 [meta.py:_setup_git():187] setup git done
+2023-02-24 13:34:32,341 DEBUG   HandlerThread:192648 [meta.py:_save_pip():52] save pip
+2023-02-24 13:34:32,342 DEBUG   HandlerThread:192648 [meta.py:_save_pip():66] save pip done
+2023-02-24 13:34:32,342 DEBUG   HandlerThread:192648 [meta.py:probe():231] probe done
+2023-02-24 13:34:32,391 DEBUG   SenderThread:192648 [sender.py:send():161] send: files
+2023-02-24 13:34:32,391 INFO    SenderThread:192648 [sender.py:_save_file():769] saving file wandb-metadata.json with policy now
+2023-02-24 13:34:32,400 DEBUG   HandlerThread:192648 [handler.py:handle_request():101] handle_request: status
+2023-02-24 13:34:32,400 DEBUG   SenderThread:192648 [sender.py:send():161] send: request
+2023-02-24 13:34:32,400 DEBUG   SenderThread:192648 [sender.py:send_request():170] send_request: status
+2023-02-24 13:34:32,602 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:32,851 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:33,069 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:33,306 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:33,533 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:33,757 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:33,982 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:34,211 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:34,451 DEBUG   SenderThread:192648 [sender.py:send():161] send: config
+2023-02-24 13:34:34,500 WARNING MainThread:192648 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2023-02-24 13:34:34,518 DEBUG   HandlerThread:192648 [handler.py:handle_request():101] handle_request: poll_exit
+2023-02-24 13:34:34,681 WARNING MainThread:192648 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2023-02-24 13:34:34,682 ERROR   MainThread:192648 [internal.py:wandb_internal():149] Internal process interrupted.
+2023-02-24 13:34:34,682 INFO    SenderThread:192648 [sender.py:finish():872] shutting down sender
+2023-02-24 13:34:34,990 INFO    MainThread:192648 [internal.py:handle_exit():78] Internal process exited

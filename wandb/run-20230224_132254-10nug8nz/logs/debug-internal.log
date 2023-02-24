@@ -1,0 +1,12 @@
+2023-02-24 13:22:55,176 INFO    MainThread:191821 [internal.py:wandb_internal():91] W&B internal server running at pid: 191821, started at: 2023-02-24 13:22:55.175834
+2023-02-24 13:22:55,180 INFO    WriterThread:191821 [datastore.py:open_for_write():77] open: /home/renfei/Documents/se3gcnn/wandb/run-20230224_132254-10nug8nz/run-10nug8nz.wandb
+2023-02-24 13:22:55,181 DEBUG   HandlerThread:191821 [handler.py:handle_request():101] handle_request: check_version
+2023-02-24 13:22:55,182 DEBUG   SenderThread:191821 [sender.py:send():161] send: header
+2023-02-24 13:22:55,182 DEBUG   SenderThread:191821 [sender.py:send():161] send: request
+2023-02-24 13:22:55,182 DEBUG   SenderThread:191821 [sender.py:send_request():170] send_request: check_version
+2023-02-24 13:22:55,275 DEBUG   SenderThread:191821 [sender.py:send():161] send: run
+2023-02-24 13:22:55,342 WARNING MainThread:191821 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2023-02-24 13:22:55,533 INFO    SenderThread:191821 [sender.py:_start_run_threads():638] run started: 10nug8nz with start time 1677241374
+2023-02-24 13:22:55,550 WARNING MainThread:191821 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2023-02-24 13:22:55,550 ERROR   MainThread:191821 [internal.py:wandb_internal():149] Internal process interrupted.
+2023-02-24 13:22:55,872 INFO    MainThread:191821 [internal.py:handle_exit():78] Internal process exited

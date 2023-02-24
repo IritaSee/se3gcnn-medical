@@ -236,7 +236,7 @@ class DataCubeRotation(Dataset):
         self.binds = binds
         self.manifold_coords = manifold_coords.to(device)
         self.watson_param = args.watson_param
-        self.model_voxel = args.voxel_cnn
+        self.model_voxel = args.network=='baseline'
 
         inv_rots = []
         for rot in self.rotations:

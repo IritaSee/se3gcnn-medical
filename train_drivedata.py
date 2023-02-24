@@ -149,8 +149,8 @@ def main():
     parser.add_argument("--b0", type=int, default=1000)
     parser.add_argument("--grid_size", type=int, default=7)
     parser.add_argument("--cuda", type=int, default=0)
-    parser.add_argument("--exp_name", type=str, default='testnow')     # the experiment name in wandb.
-    parser.add_argument("--run_path", type=str, default='testnow')		# the name of the folder that is going to be generated later.
+    parser.add_argument("--exp_name", type=str, default='test')     # the experiment name in wandb.
+    parser.add_argument("--run_path", type=str, default='test')		# the name of the folder that is going to be generated later.
     parser.add_argument("--spatial_kernel_size", nargs='+', type=int, default=[3, 3, 3])
     parser.add_argument("--interpolate", default=False, action='store_true')    # if true, the program runs GCNN, if false, the program runs classical CNN.
     parser.add_argument("--pooling", type=str, default='max')
@@ -174,13 +174,11 @@ def main():
         folder_name = f"classical_grid_size_{args.aug_grid}"
     else:
         folder_name = f"num_rays_{args.num_rays}_samples_per_ray_{args.samples_per_ray}_ray_len_{args.ray_len}_watson_{args.watson_param}_grid_size_{args.grid_size}"
-    print(folder_name in data_folder)
     
     data_path_train = data_path + folder_name
     if args.data_aug:
         data_path_train = f"{data_path}classical_grid_size_{args.aug_grid}"
     data_path += folder_name
-    print(data_path_train, data_path)
 
     scans = os.listdir(data_path)
     train = ['100206']

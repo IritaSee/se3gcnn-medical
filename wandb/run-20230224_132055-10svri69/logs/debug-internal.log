@@ -1,0 +1,13 @@
+2023-02-24 13:20:56,144 INFO    MainThread:191653 [internal.py:wandb_internal():91] W&B internal server running at pid: 191653, started at: 2023-02-24 13:20:56.144703
+2023-02-24 13:20:56,147 DEBUG   HandlerThread:191653 [handler.py:handle_request():101] handle_request: check_version
+2023-02-24 13:20:56,147 INFO    WriterThread:191653 [datastore.py:open_for_write():77] open: /home/renfei/Documents/se3gcnn/wandb/run-20230224_132055-10svri69/run-10svri69.wandb
+2023-02-24 13:20:56,150 DEBUG   SenderThread:191653 [sender.py:send():161] send: header
+2023-02-24 13:20:56,151 DEBUG   SenderThread:191653 [sender.py:send():161] send: request
+2023-02-24 13:20:56,151 DEBUG   SenderThread:191653 [sender.py:send_request():170] send_request: check_version
+2023-02-24 13:20:56,245 DEBUG   SenderThread:191653 [sender.py:send():161] send: run
+2023-02-24 13:20:56,577 WARNING MainThread:191653 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2023-02-24 13:20:56,752 WARNING MainThread:191653 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2023-02-24 13:20:56,752 ERROR   MainThread:191653 [internal.py:wandb_internal():149] Internal process interrupted.
+2023-02-24 13:20:57,061 INFO    MainThread:191653 [internal.py:handle_exit():78] Internal process exited
+2023-02-24 13:20:57,063 INFO    SenderThread:191653 [sender.py:_start_run_threads():638] run started: 10svri69 with start time 1677241255
+2023-02-24 13:20:57,063 INFO    SenderThread:191653 [sender.py:finish():872] shutting down sender

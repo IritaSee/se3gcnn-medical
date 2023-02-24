@@ -1,0 +1,62 @@
+2023-02-24 13:16:06,055 INFO    MainThread:191230 [wandb_setup.py:_flush():69] setting env: {}
+2023-02-24 13:16:06,055 INFO    MainThread:191230 [wandb_setup.py:_flush():69] setting login settings: {}
+2023-02-24 13:16:06,056 INFO    MainThread:191230 [wandb_init.py:_log_setup():334] Logging user logs to /home/renfei/Documents/se3gcnn/wandb/run-20230224_131606-13a6kddm/logs/debug.log
+2023-02-24 13:16:06,056 INFO    MainThread:191230 [wandb_init.py:_log_setup():335] Logging internal logs to /home/renfei/Documents/se3gcnn/wandb/run-20230224_131606-13a6kddm/logs/debug-internal.log
+2023-02-24 13:16:06,056 INFO    MainThread:191230 [wandb_init.py:init():367] calling init triggers
+2023-02-24 13:16:06,056 INFO    MainThread:191230 [wandb_init.py:init():374] wandb.init called with sweep_config: {}
+config: {}
+2023-02-24 13:16:06,056 INFO    MainThread:191230 [wandb_init.py:init():416] starting backend
+2023-02-24 13:16:06,056 INFO    MainThread:191230 [backend.py:_multiprocessing_setup():71] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-02-24 13:16:06,062 INFO    MainThread:191230 [backend.py:ensure_launched():123] starting backend process...
+2023-02-24 13:16:06,151 INFO    MainThread:191230 [backend.py:ensure_launched():128] started backend process with pid: 191268
+2023-02-24 13:16:06,153 INFO    MainThread:191230 [wandb_init.py:init():421] backend started and connected
+2023-02-24 13:16:06,154 INFO    MainThread:191230 [wandb_init.py:init():461] updated telemetry
+2023-02-24 13:16:06,155 INFO    MainThread:191230 [wandb_init.py:init():480] communicating current version
+2023-02-24 13:16:06,905 INFO    MainThread:191230 [wandb_init.py:init():485] got version response upgrade_message: "wandb version 0.13.10 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-02-24 13:16:06,906 INFO    MainThread:191230 [wandb_init.py:init():493] communicating run to backend with 30 second timeout
+2023-02-24 13:16:07,194 INFO    MainThread:191230 [wandb_init.py:init():518] starting run threads in backend
+2023-02-24 13:16:07,295 INFO    MainThread:191230 [wandb_run.py:_console_start():1480] atexit reg
+2023-02-24 13:16:07,296 INFO    MainThread:191230 [wandb_run.py:_redirect():1343] redirect: SettingsConsole.REDIRECT
+2023-02-24 13:16:07,299 INFO    MainThread:191230 [wandb_run.py:_redirect():1348] Redirecting console.
+2023-02-24 13:16:07,299 INFO    MainThread:191230 [redirect.py:install():213] install start
+2023-02-24 13:16:07,299 INFO    MainThread:191230 [redirect.py:install():228] install stop
+2023-02-24 13:16:07,300 INFO    MainThread:191230 [redirect.py:install():213] install start
+2023-02-24 13:16:07,300 INFO    MainThread:191230 [redirect.py:install():228] install stop
+2023-02-24 13:16:07,300 INFO    MainThread:191230 [wandb_run.py:_redirect():1394] Redirects installed.
+2023-02-24 13:16:07,300 INFO    MainThread:191230 [wandb_init.py:init():542] run started, returning control to user process
+2023-02-24 13:16:07,302 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'cuda': 0, 'b0': 1000}
+2023-02-24 13:16:07,303 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'num_shells': 1}
+2023-02-24 13:16:07,304 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'ray_len': None}
+2023-02-24 13:16:07,305 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'b_size': 100}
+2023-02-24 13:16:07,305 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'watson_param': 10}
+2023-02-24 13:16:07,306 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'num_epoch': 100}
+2023-02-24 13:16:07,306 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'lr': 0.001}
+2023-02-24 13:16:07,307 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'pooling': 'max'}
+2023-02-24 13:16:07,308 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'aug': False}
+2023-02-24 13:16:07,308 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'f_lift': 10}
+2023-02-24 13:16:07,308 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'f_conv1': 20}
+2023-02-24 13:16:07,309 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'f_conv2': 40}
+2023-02-24 13:16:07,309 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'f_conv3': 10}
+2023-02-24 13:16:07,309 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'f_spatial1': 20}
+2023-02-24 13:16:07,310 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'f_spatial2': 40}
+2023-02-24 13:16:07,310 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'f_spatial3': 20}
+2023-02-24 13:16:07,311 INFO    MainThread:191230 [wandb_run.py:_config_callback():733] config_cb None None {'alpha': [0.35, 0.35, 0.15, 0.15], 'gamma': 2.0}
+2023-02-24 13:16:08,636 INFO    MainThread:191230 [wandb_run.py:_atexit_cleanup():1450] got exitcode: 255
+2023-02-24 13:16:08,638 INFO    MainThread:191230 [wandb_run.py:_restore():1422] restore
+2023-02-24 13:16:08,638 INFO    MainThread:191230 [redirect.py:uninstall():232] uninstall start
+2023-02-24 13:16:08,639 INFO    MainThread:191230 [redirect.py:_stop():287] _stop: stdout
+2023-02-24 13:16:08,640 INFO    MainThread:191230 [redirect.py:_stop():293] _stop closed: stdout
+2023-02-24 13:16:08,640 INFO    stdout    :191230 [redirect.py:_pipe_relay():129] relay done saw last write: stdout
+2023-02-24 13:16:08,640 INFO    stdout    :191230 [redirect.py:_pipe_relay():145] relay done done: stdout
+2023-02-24 13:16:08,640 INFO    MainThread:191230 [redirect.py:_stop():299] _stop joined: stdout
+2023-02-24 13:16:08,640 INFO    MainThread:191230 [redirect.py:_stop():301] _stop rd closed: stdout
+2023-02-24 13:16:08,641 INFO    MainThread:191230 [redirect.py:uninstall():236] uninstall done
+2023-02-24 13:16:08,641 INFO    MainThread:191230 [redirect.py:uninstall():232] uninstall start
+2023-02-24 13:16:08,641 INFO    MainThread:191230 [redirect.py:_stop():287] _stop: stderr
+2023-02-24 13:16:08,641 INFO    MainThread:191230 [redirect.py:_stop():293] _stop closed: stderr
+2023-02-24 13:16:08,641 INFO    stderr    :191230 [redirect.py:_pipe_relay():129] relay done saw last write: stderr
+2023-02-24 13:16:08,641 INFO    stderr    :191230 [redirect.py:_pipe_relay():145] relay done done: stderr
+2023-02-24 13:16:08,641 INFO    MainThread:191230 [redirect.py:_stop():299] _stop joined: stderr
+2023-02-24 13:16:08,641 INFO    MainThread:191230 [redirect.py:_stop():301] _stop rd closed: stderr
+2023-02-24 13:16:08,641 INFO    MainThread:191230 [redirect.py:uninstall():236] uninstall done

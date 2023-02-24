@@ -1,0 +1,42 @@
+2023-02-24 13:15:25,389 INFO    MainThread:191200 [internal.py:wandb_internal():91] W&B internal server running at pid: 191200, started at: 2023-02-24 13:15:25.389259
+2023-02-24 13:15:25,392 DEBUG   HandlerThread:191200 [handler.py:handle_request():101] handle_request: check_version
+2023-02-24 13:15:25,392 INFO    WriterThread:191200 [datastore.py:open_for_write():77] open: /home/renfei/Documents/se3gcnn/wandb/run-20230224_131524-1ypyvzx1/run-1ypyvzx1.wandb
+2023-02-24 13:15:25,395 DEBUG   SenderThread:191200 [sender.py:send():161] send: header
+2023-02-24 13:15:25,395 DEBUG   SenderThread:191200 [sender.py:send():161] send: request
+2023-02-24 13:15:25,395 DEBUG   SenderThread:191200 [sender.py:send_request():170] send_request: check_version
+2023-02-24 13:15:25,495 DEBUG   SenderThread:191200 [sender.py:send():161] send: run
+2023-02-24 13:15:25,765 INFO    SenderThread:191200 [sender.py:_start_run_threads():638] run started: 1ypyvzx1 with start time 1677240924
+2023-02-24 13:15:25,765 DEBUG   SenderThread:191200 [sender.py:send():161] send: summary
+2023-02-24 13:15:25,766 INFO    SenderThread:191200 [sender.py:_save_file():769] saving file wandb-summary.json with policy end
+2023-02-24 13:15:25,770 DEBUG   HandlerThread:191200 [handler.py:handle_request():101] handle_request: run_start
+2023-02-24 13:15:25,778 DEBUG   HandlerThread:191200 [meta.py:__init__():34] meta init
+2023-02-24 13:15:25,779 DEBUG   HandlerThread:191200 [meta.py:__init__():48] meta init done
+2023-02-24 13:15:25,779 DEBUG   HandlerThread:191200 [meta.py:probe():190] probe
+2023-02-24 13:15:25,786 DEBUG   HandlerThread:191200 [meta.py:_setup_git():180] setup git
+2023-02-24 13:15:25,811 DEBUG   HandlerThread:191200 [meta.py:_setup_git():187] setup git done
+2023-02-24 13:15:25,811 DEBUG   HandlerThread:191200 [meta.py:_save_pip():52] save pip
+2023-02-24 13:15:25,812 DEBUG   HandlerThread:191200 [meta.py:_save_pip():66] save pip done
+2023-02-24 13:15:25,812 DEBUG   HandlerThread:191200 [meta.py:probe():231] probe done
+2023-02-24 13:15:25,861 DEBUG   SenderThread:191200 [sender.py:send():161] send: files
+2023-02-24 13:15:25,861 INFO    SenderThread:191200 [sender.py:_save_file():769] saving file wandb-metadata.json with policy now
+2023-02-24 13:15:25,869 DEBUG   HandlerThread:191200 [handler.py:handle_request():101] handle_request: status
+2023-02-24 13:15:25,873 DEBUG   SenderThread:191200 [sender.py:send():161] send: request
+2023-02-24 13:15:25,873 DEBUG   SenderThread:191200 [sender.py:send_request():170] send_request: status
+2023-02-24 13:15:26,065 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:26,287 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:26,503 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:26,727 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:26,954 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:27,235 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:27,456 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:27,674 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:27,895 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:28,127 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:28,344 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:28,442 WARNING MainThread:191200 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2023-02-24 13:15:28,477 DEBUG   HandlerThread:191200 [handler.py:handle_request():101] handle_request: poll_exit
+2023-02-24 13:15:28,572 DEBUG   SenderThread:191200 [sender.py:send():161] send: config
+2023-02-24 13:15:28,642 WARNING MainThread:191200 [internal.py:wandb_internal():146] Internal process interrupt: 2
+2023-02-24 13:15:28,642 ERROR   MainThread:191200 [internal.py:wandb_internal():149] Internal process interrupted.
+2023-02-24 13:15:28,821 INFO    SenderThread:191200 [sender.py:finish():872] shutting down sender
+2023-02-24 13:15:28,964 INFO    MainThread:191200 [internal.py:handle_exit():78] Internal process exited

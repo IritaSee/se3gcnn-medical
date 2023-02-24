@@ -1,0 +1,68 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.22
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.6.15
+    t:
+      1:
+      - 1
+      4: 3.6.15
+      5: 0.10.22
+      8:
+      - 5
+aug:
+  desc: null
+  value: false
+b0:
+  desc: null
+  value: 1000
+b_size:
+  desc: null
+  value: 100
+cuda:
+  desc: null
+  value: 0
+f_conv1:
+  desc: null
+  value: 5
+f_conv2:
+  desc: null
+  value: 5
+f_conv3:
+  desc: null
+  value: 5
+f_lift:
+  desc: null
+  value: 5
+f_spatial1:
+  desc: null
+  value: 5
+f_spatial2:
+  desc: null
+  value: 5
+f_spatial3:
+  desc: null
+  value: 5
+lr:
+  desc: null
+  value: 0.001
+num_epoch:
+  desc: null
+  value: 100
+num_shells:
+  desc: null
+  value: 1
+pooling:
+  desc: null
+  value: max
+ray_len:
+  desc: null
+  value: null
+watson_param:
+  desc: null
+  value: 10
