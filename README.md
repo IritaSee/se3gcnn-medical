@@ -91,6 +91,8 @@ To get test results from all models, the script equiv_test.py is used. This scri
 
 After the random rotations are generated, we can generate the test results from all models that were trained, using both the original and the rotated test set. The accuracies and dices scores of each scan will be stored in a folder named ```images/``` in the experiment folder, and the predicted segmentation will also be generated and stored in ```images/```.
 
+After running ```equiv_test.py``` for all experiments using the commands below, ```gather_results.ipynb``` gathers the results together and calculates the statistics for all experiments.
+
 To generate the results from OursFull<sup>- </sup> or OursFull<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_full```
 
 To generate the results from OursFullAug<sup>- </sup> or OursFullAug<sup>+</sup>, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --model_capacity [small or big] --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_full --data_aug```
