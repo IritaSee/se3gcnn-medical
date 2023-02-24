@@ -1,31 +1,0 @@
-#params 2514
-  0%|          | 0/100 [00:00<?, ?it/s]
-  0%|          | 0/6286 [00:00<?, ?it/s][A/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/nn/functional.py:3385: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
-  warnings.warn("Default grid_sample and affine_grid behavior has changed "
-
-  0%|          | 1/6286 [00:00<1:36:26,  1.09it/s][A
-  0%|          | 3/6286 [00:01<31:43,  3.30it/s]  [A
-  0%|          | 5/6286 [00:01<19:41,  5.31it/s][A
-  0%|          | 7/6286 [00:01<14:37,  7.16it/s][A
-  0%|          | 9/6286 [00:01<12:11,  8.58it/s][A
-  0%|          | 11/6286 [00:01<10:50,  9.65it/s][A
-  0%|          | 13/6286 [00:01<09:50, 10.62it/s][A
-  0%|          | 15/6286 [00:02<09:06, 11.47it/s][A
-  0%|          | 17/6286 [00:02<08:33, 12.20it/s][A
-  0%|          | 19/6286 [00:02<08:11, 12.74it/s][A
-  0%|          | 21/6286 [00:02<07:57, 13.13it/s][A  0%|          | 22/6286 [00:02<12:15,  8.52it/s]
-  0%|          | 0/100 [00:02<?, ?it/s]
-Traceback (most recent call last):
-  File "train_drivedata.py", line 291, in <module>
-    main()
-  File "train_drivedata.py", line 265, in main
-    run_training(args, args.cuda, train_dl, test_dl, "run_steerable_gcnn(args, device, True)")
-  File "train_drivedata.py", line 60, in run_training
-    device)
-  File "/home/renfei/Documents/se3gcnn/model_util.py", line 901, in train_model
-    loss.backward()
-  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/tensor.py", line 221, in backward
-    torch.autograd.backward(self, gradient, retain_graph, create_graph)
-  File "/home/renfei/anaconda3/envs/torchenv/lib/python3.6/site-packages/torch/autograd/__init__.py", line 132, in backward
-    allow_unreachable=True)  # allow_unreachable flag
-KeyboardInterrupt
