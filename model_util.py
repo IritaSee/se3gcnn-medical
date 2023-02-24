@@ -7,9 +7,9 @@ from scipy.spatial.transform import Rotation as R
 import torch
 from torch.utils.data import Dataset, DataLoader
 from torch.utils.data.sampler import Sampler
-from tqdm import tqdm
 from torch.nn.modules import Module
 import torch.nn.functional as F
+from tqdm import tqdm
 import wandb
 
 from mesh_util import compute_rotations
