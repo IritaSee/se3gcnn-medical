@@ -19,7 +19,7 @@ numpy
 
 ## Data
 
-In this work, Human-connectome Project (HCP) data are used. The data can be downloaded from [here](https://www.humanconnectome.org/study/hcp-young-adult/). Registration is needed.
+In this work, Human-connectome Project (HCP) data [[1]](#1) are used. The data can be downloaded from [here](https://www.humanconnectome.org/study/hcp-young-adult/). Registration is needed.
 
 After registering and downloading the data (you can download one scan at a time), each scan is a folder named by an ID (e.g. 100408) containing all the data needed. All scan folders are contained in a root folder. The structure of the folders should be:
 ```
@@ -123,3 +123,9 @@ To generate the results from the partly augmented network, run ```python equiv_t
 
 To generate the results from the SE(3) network that is used to compare with an existing method, run ```python equiv_test.py --path [your path to the root folder] --interoplate --grid_size 7 --exp_name [your wandb name] --run_path [name of the folder to be created to store the results] --epoch [the epoch you choose] --network ours_compare```
 
+## References
+
+<a id="1">[1]</a>
+Van Essen DC, Smith SM, Barch DM, Behrens TE, Yacoub E, Ugurbil K; WU-Minn HCP Consortium.
+The WU-Minn Human Connectome Project: an overview. Neuroimage.
+2013 Oct 15;80:62-79. doi: 10.1016/j.neuroimage.2013.05.041. Epub 2013 May 16. PMID: 23684880; PMCID: PMC3724347.
