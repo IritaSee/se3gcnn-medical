@@ -164,3 +164,7 @@ To generate the results from the SE(3) network that is used to compare with an e
 Van Essen DC, Smith SM, Barch DM, Behrens TE, Yacoub E, Ugurbil K; WU-Minn HCP Consortium.
 The WU-Minn Human Connectome Project: an overview. Neuroimage.
 2013 Oct 15;80:62-79. doi: 10.1016/j.neuroimage.2013.05.041. Epub 2013 May 16. PMID: 23684880; PMCID: PMC3724347.
+
+## Demo
+
+A demo that runs on randomly generated data can be found in demo.ipynb. Since there is nothing to learn from the synthetic dataset, only the output shape is printed. It should take no time to run the small demo.
