@@ -53,7 +53,7 @@ The script to train the networks is train_drivedata.py.
 
 Weights and Biases (WandB) package is used to log the training. To run our script, you simply have to provide in the command line an experiment name (that you think of yourself) for WandB for the logging, and follow the instructions shown in the console from WandB.
 
-It is suggested to use the same WandB name for all the experiments, so they will all be shown together. It is also suggested to store the results in the same folder in different sub-folders. **In other words, it is suggested to use the same --run_path and --exp_name arguments for all experiments.**
+It is suggested to use the same WandB name for all the experiments (use --exp_name argument to pass the WandB name), so they will all be shown together. It is also suggested to store the results in the same folder in different sub-folders, and the name of the root folder to store the experiment folders is passed by --run_path argument. **In other words, it is suggested to use the same --run_path and --exp_name arguments for all experiments.**
 
 In the main experiments, there are 5 networks to train. In the paper, they are named OursFull, OursPart, OursDecoupled, Baseline, and Classical. We train each network with a small and a big capacity (marked in the names with superscript - or +), and with or without data augmentation (marked in the names with or without Aug). Thus we end up with 20 experiments. The names of the experiments are the same as in the paper.
 
