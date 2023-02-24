@@ -1,3 +1,6 @@
+# This is taken from https://github.com/AdeelH/pytorch-multi-class-focal-loss,
+# an implementation of the Focal Loss from the paper https://arxiv.org/abs/1708.02002.
+
 from typing import Optional, Sequence
 
 import torch
