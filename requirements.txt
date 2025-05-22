@@ -1,0 +1,8 @@
+torch>=1.9.0
+wandb>=0.12.0
+scipy>=1.5.2
+tqdm>=4.57.0
+nibabel>=3.2.1
+numpy>=1.19.0
+torch-scatter>=2.0.8  # For handling sparse data operations
+focal-loss-torch>=0.1.0  # For focal loss implementation
